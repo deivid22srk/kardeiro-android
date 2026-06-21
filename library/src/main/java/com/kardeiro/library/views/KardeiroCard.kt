@@ -1,16 +1,16 @@
 package com.kardeiro.library.views
 
 import android.content.Context
+import android.graphics.BlurMaskFilter
 import android.graphics.Canvas
-import android.graphics.Color
+import android.graphics.Outline
 import android.graphics.Paint
-import android.graphics.Path
 import android.graphics.RectF
-import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.View
+import android.view.ViewOutlineProvider
+import android.widget.FrameLayout
 import androidx.core.content.ContextCompat
-import androidx.core.graphics.withSave
 import com.kardeiro.library.R
 import com.kardeiro.library.util.KardeiroDisplay
 
@@ -24,8 +24,8 @@ import com.kardeiro.library.util.KardeiroDisplay
  *   - Optional 1dp outline in the Kardeiro outline color
  *   - Optional ripple feedback for clickable cards
  *
- * Use it as a regular container — it extends [View] and lays out children
- * like a FrameLayout-style container via the superclass.
+ * Extends [FrameLayout] so it can host child views. Children are clipped to
+ * the rounded corner shape via a [ViewOutlineProvider] (API 21+).
  *
  * XML example:
  * ```xml
@@ -35,6 +35,7 @@ import com.kardeiro.library.util.KardeiroDisplay
  *     app:kardeiro_cornerRadius="20dp"
  *     app:kardeiro_elevation="8dp"
  *     app:kardeiro_borderWidth="1dp"
+ *     app:kardeiro_padding="20dp"
  *     app:kardeiro_shadowEnabled="true">
  *
  *     <!-- child views -->
@@ -45,14 +46,13 @@ class KardeiroCard @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
-) : View(context, attrs, defStyleAttr) {
+) : FrameLayout(context, attrs, defStyleAttr) {
 
     private val bgPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply { style = Paint.Style.FILL }
     private val borderPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply { style = Paint.Style.STROKE }
     private val shadowPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply { style = Paint.Style.FILL }
 
     private val rect = RectF()
-    private val clipPath = Path()
 
     private var cornerRadius: Float = KardeiroDisplay.dpToPx(16f)
     private var shadowRadius: Float = KardeiroDisplay.dpToPx(12f)
@@ -103,11 +103,32 @@ class KardeiroCard @JvmOverloads constructor(
                 a.recycle()
             }
         }
+
+        // Important: FrameLayout (a ViewGroup) does not call onDraw by default.
+        // Opt in to drawing so our background / shadow / border are rendered.
+        setWillNotDraw(false)
+
+        // Software layer is required for BlurMaskFilter (used by the shadow).
         setLayerType(LAYER_TYPE_SOFTWARE, null)
+
+        // Clip children to the rounded rectangle so content respects cornerRadius.
+        outlineProvider = object : ViewOutlineProvider() {
+            override fun getOutline(view: View, outline: Outline) {
+                outline.setRoundRect(
+                    paddingLeft,
+                    paddingTop,
+                    width - paddingRight,
+                    height - paddingBottom,
+                    cornerRadius
+                )
+            }
+        }
+        clipToOutline = true
     }
 
     fun setCornerRadius(radius: Float) {
         cornerRadius = radius
+        invalidateOutline()
         invalidate()
     }
 
@@ -126,11 +147,11 @@ class KardeiroCard @JvmOverloads constructor(
         )
 
         // Shadow
-        if (shadowEnabled) {
+        if (shadowEnabled && shadowRadius > 0f) {
             val shadowColor = ContextCompat.getColor(context, R.color.kardeiro_shadow)
             shadowPaint.color = shadowColor
-            shadowPaint.maskFilter = android.graphics.BlurMaskFilter(
-                shadowRadius, android.graphics.BlurMaskFilter.Blur.NORMAL
+            shadowPaint.maskFilter = BlurMaskFilter(
+                shadowRadius, BlurMaskFilter.Blur.NORMAL
             )
             val shadowRect = RectF(
                 rect.left,

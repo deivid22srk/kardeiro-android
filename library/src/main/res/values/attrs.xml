@@ -17,6 +17,8 @@
 
     <!-- KardeiroButton -->
     <declare-styleable name="KardeiroButton">
+        <!-- Allow consumers to set text via android:text on KardeiroButton -->
+        <attr name="android:text" />
         <attr name="kardeiro_buttonStyle" format="enum">
             <enum name="filled" value="0" />
             <enum name="tonal" value="1" />

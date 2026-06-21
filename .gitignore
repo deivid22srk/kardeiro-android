@@ -1,0 +1,24 @@
+# Built artifacts
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+
+# Module-level build dirs
+**/build/
+**/.gradle/
+
+# Keystore / signing
+*.jks
+*.keystore
+
+# Local configs
+local.properties
+
+# Logs
+*.log

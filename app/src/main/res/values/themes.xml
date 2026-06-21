@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--
+      The app reuses the Kardeiro theme defined in the :library module.
+      Library resources are merged into the app at build time, so the
+      AndroidManifest references @style/Theme.Kardeiro.NoActionBar directly.
+      This file is intentionally empty of new theme declarations.
+    -->
+</resources>

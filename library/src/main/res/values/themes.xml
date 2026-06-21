@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Kardeiro base theme — warm, modern, soft -->
+    <style name="Theme.Kardeiro" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/kardeiro_primary</item>
+        <item name="colorPrimaryVariant">@color/kardeiro_primary_dark</item>
+        <item name="colorOnPrimary">@color/kardeiro_on_primary</item>
+        <item name="colorSecondary">@color/kardeiro_secondary</item>
+        <item name="colorSecondaryVariant">@color/kardeiro_secondary_dark</item>
+        <item name="colorOnSecondary">@color/kardeiro_on_secondary</item>
+        <item name="colorAccent">@color/kardeiro_accent</item>
+        <item name="android:colorBackground">@color/kardeiro_background</item>
+        <item name="colorSurface">@color/kardeiro_surface</item>
+        <item name="colorOnSurface">@color/kardeiro_on_surface</item>
+        <item name="colorError">@color/kardeiro_error</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/kardeiro_primary_dark</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/kardeiro_surface</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+    </style>
+
+    <style name="Theme.Kardeiro.NoActionBar" parent="Theme.Kardeiro">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Typography -->
+    <style name="TextAppearance.Kardeiro.Display" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textSize">@dimen/kardeiro_text_display</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">@color/kardeiro_on_background</item>
+    </style>
+
+    <style name="TextAppearance.Kardeiro.Headline" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textSize">@dimen/kardeiro_text_headline</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="android:textColor">@color/kardeiro_on_background</item>
+    </style>
+
+    <style name="TextAppearance.Kardeiro.Title" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textSize">@dimen/kardeiro_text_title</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/kardeiro_on_background</item>
+    </style>
+
+    <style name="TextAppearance.Kardeiro.Body" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">@dimen/kardeiro_text_body</item>
+        <item name="android:textColor">@color/kardeiro_on_surface_variant</item>
+    </style>
+
+    <style name="TextAppearance.Kardeiro.Label" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">@dimen/kardeiro_text_label</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.06</item>
+        <item name="android:textColor">@color/kardeiro_secondary</item>
+    </style>
+
+    <style name="TextAppearance.Kardeiro.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">@dimen/kardeiro_text_caption</item>
+        <item name="android:textColor">@color/kardeiro_on_surface_variant</item>
+    </style>
+</resources>

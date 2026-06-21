@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Kardeiro brand palette: warm terracotta / amber / cream -->
+
+    <!-- Primary: Terracotta -->
+    <color name="kardeiro_primary">#C2410C</color>
+    <color name="kardeiro_primary_dark">#9A2E08</color>
+    <color name="kardeiro_primary_light">#F97316</color>
+    <color name="kardeiro_on_primary">#FFFBF5</color>
+
+    <!-- Secondary: Warm Amber -->
+    <color name="kardeiro_secondary">#D97706</color>
+    <color name="kardeiro_secondary_dark">#B45309</color>
+    <color name="kardeiro_on_secondary">#FFFBF5</color>
+
+    <!-- Accent: Sand Gold -->
+    <color name="kardeiro_accent">#F59E0B</color>
+    <color name="kardeiro_on_accent">#3F1D05</color>
+
+    <!-- Surfaces: Cream / Warm neutrals -->
+    <color name="kardeiro_background">#FFF8F1</color>
+    <color name="kardeiro_surface">#FFFDF8</color>
+    <color name="kardeiro_surface_variant">#FDEDD3</color>
+    <color name="kardeiro_on_background">#2A1810</color>
+    <color name="kardeiro_on_surface">#2A1810</color>
+    <color name="kardeiro_on_surface_variant">#5C3A1E</color>
+
+    <!-- Outline -->
+    <color name="kardeiro_outline">#D4A574</color>
+    <color name="kardeiro_outline_variant">#E8C9A0</color>
+
+    <!-- Status -->
+    <color name="kardeiro_success">#15803D</color>
+    <color name="kardeiro_warning">#B45309</color>
+    <color name="kardeiro_error">#B91C1C</color>
+    <color name="kardeiro_info">#1D4ED8</color>
+
+    <!-- Shadow tint -->
+    <color name="kardeiro_shadow">#1FC2410C</color>
+</resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Kardeiro custom styleable attributes -->
+
+    <!-- KardeiroCard -->
+    <declare-styleable name="KardeiroCard">
+        <attr name="kardeiro_cornerRadius" format="dimension" />
+        <attr name="kardeiro_elevation" format="dimension" />
+        <attr name="kardeiro_backgroundColor" format="color" />
+        <attr name="kardeiro_borderWidth" format="dimension" />
+        <attr name="kardeiro_borderColor" format="color" />
+        <attr name="kardeiro_shadowEnabled" format="boolean" />
+        <attr name="kardeiro_shadowRadius" format="dimension" />
+        <attr name="kardeiro_padding" format="dimension" />
+        <attr name="kardeiro_rippleEnabled" format="boolean" />
+    </declare-styleable>
+
+    <!-- KardeiroButton -->
+    <declare-styleable name="KardeiroButton">
+        <attr name="kardeiro_buttonStyle" format="enum">
+            <enum name="filled" value="0" />
+            <enum name="tonal" value="1" />
+            <enum name="outlined" value="2" />
+            <enum name="text" value="3" />
+        </attr>
+        <attr name="kardeiro_buttonRadius" format="dimension" />
+        <attr name="kardeiro_buttonElevation" format="dimension" />
+        <attr name="kardeiro_iconSrc" format="reference" />
+        <attr name="kardeiro_iconTint" format="color" />
+        <attr name="kardeiro_iconSize" format="dimension" />
+        <attr name="kardeiro_iconGravity" format="enum">
+            <enum name="start" value="0" />
+            <enum name="end" value="1" />
+            <enum name="top" value="2" />
+            <enum name="bottom" value="3" />
+        </attr>
+        <attr name="kardeiro_loading" format="boolean" />
+    </declare-styleable>
+
+    <!-- KardeiroLayout (root container) -->
+    <declare-styleable name="KardeiroLayout">
+        <attr name="kardeiro_layoutType" format="enum">
+            <enum name="linear" value="0" />
+            <enum name="frame" value="1" />
+            <enum name="relative" value="2" />
+        </attr>
+        <attr name="kardeiro_orientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="kardeiro_spacing" format="dimension" />
+        <attr name="kardeiro_insetStart" format="dimension" />
+        <attr name="kardeiro_insetEnd" format="dimension" />
+        <attr name="kardeiro_insetTop" format="dimension" />
+        <attr name="kardeiro_insetBottom" format="dimension" />
+    </declare-styleable>
+
+    <!-- KardeiroTextField -->
+    <declare-styleable name="KardeiroTextField">
+        <attr name="kardeiro_fieldRadius" format="dimension" />
+        <attr name="kardeiro_fieldBackgroundColor" format="color" />
+        <attr name="kardeiro_fieldBorderWidth" format="dimension" />
+        <attr name="kardeiro_fieldBorderColor" format="color" />
+        <attr name="kardeiro_fieldLabel" format="string" />
+        <attr name="kardeiro_fieldHint" format="string" />
+        <attr name="kardeiro_fieldErrorText" format="string" />
+        <attr name="kardeiro_fieldHelperText" format="string" />
+        <attr name="kardeiro_fieldLeadingIcon" format="reference" />
+        <attr name="kardeiro_fieldTrailingIcon" format="reference" />
+    </declare-styleable>
+
+    <!-- KardeiroBadge -->
+    <declare-styleable name="KardeiroBadge">
+        <attr name="kardeiro_badgeText" format="string" />
+        <attr name="kardeiro_badgeColor" format="color" />
+        <attr name="kardeiro_badgeTextColor" format="color" />
+        <attr name="kardeiro_badgeRadius" format="dimension" />
+        <attr name="kardeiro_badgeSize" format="enum">
+            <enum name="small" value="0" />
+            <enum name="medium" value="1" />
+            <enum name="large" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <!-- KardeiroHeader -->
+    <declare-styleable name="KardeiroHeader">
+        <attr name="kardeiro_header_title" format="string" />
+        <attr name="kardeiro_header_subtitle" format="string" />
+        <attr name="kardeiro_header_showBack" format="boolean" />
+    </declare-styleable>
+</resources>

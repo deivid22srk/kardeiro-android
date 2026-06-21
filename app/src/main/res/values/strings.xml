@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Kardeiro Demo</string>
+    <string name="header_title">Bem-vindo</string>
+    <string name="header_subtitle">Aplicativo de demonstração do estilo Kardeiro</string>
+    <string name="card_title">Biblioteca Kardeiro</string>
+    <string name="card_body">A biblioteca Kardeiro oferece um estilo de layout próprio para apps Android, com cores quentes, cantos arredondados e sombras suaves. Use os componentes abaixo para experimentar a identidade visual.</string>
+    <string name="label_email">E-mail</string>
+    <string name="hint_email">voce@exemplo.com</string>
+    <string name="helper_email">Nunca compartilhamos seu e-mail</string>
+    <string name="label_password">Senha</string>
+    <string name="hint_password">••••••••</string>
+    <string name="action_login">Entrar</string>
+    <string name="action_create_account">Criar conta</string>
+    <string name="action_forgot">Esqueci minha senha</string>
+    <string name="badge_new">Novo</string>
+    <string name="badge_premium">Premium</string>
+</resources>

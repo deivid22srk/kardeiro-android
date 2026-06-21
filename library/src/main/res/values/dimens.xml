@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Kardeiro spacing system (8dp grid) -->
+    <dimen name="kardeiro_spacing_xxsmall">2dp</dimen>
+    <dimen name="kardeiro_spacing_xsmall">4dp</dimen>
+    <dimen name="kardeiro_spacing_small">8dp</dimen>
+    <dimen name="kardeiro_spacing_medium">16dp</dimen>
+    <dimen name="kardeiro_spacing_large">24dp</dimen>
+    <dimen name="kardeiro_spacing_xlarge">32dp</dimen>
+    <dimen name="kardeiro_spacing_xxlarge">48dp</dimen>
+
+    <!-- Card -->
+    <dimen name="kardeiro_card_radius_default">16dp</dimen>
+    <dimen name="kardeiro_card_radius_large">24dp</dimen>
+    <dimen name="kardeiro_card_elevation">6dp</dimen>
+    <dimen name="kardeiro_card_padding">16dp</dimen>
+
+    <!-- Button -->
+    <dimen name="kardeiro_button_radius_default">14dp</dimen>
+    <dimen name="kardeiro_button_radius_pill">999dp</dimen>
+    <dimen name="kardeiro_button_height">52dp</dimen>
+    <dimen name="kardeiro_button_min_width">120dp</dimen>
+    <dimen name="kardeiro_button_padding_horizontal">24dp</dimen>
+    <dimen name="kardeiro_button_elevation">4dp</dimen>
+    <dimen name="kardeiro_button_icon_size">22dp</dimen>
+
+    <!-- TextField -->
+    <dimen name="kardeiro_field_radius">14dp</dimen>
+    <dimen name="kardeiro_field_height">56dp</dimen>
+    <dimen name="kardeiro_field_padding">14dp</dimen>
+
+    <!-- Badge -->
+    <dimen name="kardeiro_badge_radius">10dp</dimen>
+    <dimen name="kardeiro_badge_small">16dp</dimen>
+    <dimen name="kardeiro_badge_medium">20dp</dimen>
+    <dimen name="kardeiro_badge_large">24dp</dimen>
+
+    <!-- Typography -->
+    <dimen name="kardeiro_text_display">40sp</dimen>
+    <dimen name="kardeiro_text_headline">28sp</dimen>
+    <dimen name="kardeiro_text_title">22sp</dimen>
+    <dimen name="kardeiro_text_body">16sp</dimen>
+    <dimen name="kardeiro_text_label">14sp</dimen>
+    <dimen name="kardeiro_text_caption">12sp</dimen>
+</resources>
